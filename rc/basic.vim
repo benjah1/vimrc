@@ -112,7 +112,7 @@ set tw=500
 set wrap "Wrap lines
 
 set number
-
+set relativenumber
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
