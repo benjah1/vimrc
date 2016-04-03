@@ -8,16 +8,7 @@ let g:ctrlp_map = '<c-f>'
 map <c-b> :CtrlPBuffer<cr>
 
 let g:ctrlp_max_height = 20
-let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
-
-
-""""""""""""""""""""""""""""""
-" => Emmet-vim
-""""""""""""""""""""""""""""""
-let g:user_emmet_mode='n'
-
-let g:user_emmet_install_global = 0
-autocmd FileType html,php EmmetInstall
+let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee|^\.vender\'
 
 
 """"""""""""""""""""""""""""""
@@ -25,12 +16,12 @@ autocmd FileType html,php EmmetInstall
 """"""""""""""""""""""""""""""
 let g:vim_tags_use_vim_dispatch = 1
 
+
 """"""""""""""""""""""""""""""
 " => Tagbar
 """"""""""""""""""""""""""""""
 nmap <c-t> :TagbarToggle<cr>
 let g:tagbar_autofocus = 1
-let g:tagbar_phpctags_bin = '/root/.vim/bundle/tagbar-phpctags.vim/bin/phpctags'
 
 
 """"""""""""""""""""""""""""""
