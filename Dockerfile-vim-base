@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:3.2
 
 MAINTAINER Benjah1 <benjaminhuang1@gmail.com>
 
