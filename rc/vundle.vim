@@ -1,9 +1,5 @@
 call plug#begin('~/.vim/plugged')
 
-" let Vundle manage Vundle
-" required! 
-Plug 'gmarik/vundle'
-
 " Language
 Plug 'mattn/emmet-vim'
 Plug 'othree/html5.vim'

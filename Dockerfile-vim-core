@@ -4,10 +4,10 @@ MAINTAINER Benjah1 <benjaminhuang1@gmail.com>
 
 #Build YouCompleteMe
 RUN apk add --virtual build-deps go llvm perl cmake python-dev build-base                                   && \
-    git clone --depth 1  https://github.com/Valloric/YouCompleteMe.git /root/.vim/plugged/YouCompleteMe/    && \
-    cd /root/.vim/plugged/YouCompleteMe                                                                     && \
+    git clone --depth 1  https://github.com/Valloric/YouCompleteMe.git /root/.vim/plugged/youCompleteMe/    && \
+    cd /root/.vim/plugged/youCompleteMe                                                                     && \
     git submodule update --init --recursive                                                                 && \
-    /root/.vim/plugged/YouCompleteMe/install.py --gocode-completer                                          && \
+    /root/.vim/plugged/youCompleteMe/install.py --gocode-completer                                          && \
 #Node.js deps (needed only if you're planning to mount and run jare/typescript)
     apk add libgcc libstdc++ libuv                                                                          && \
 #Install and compile procvim.vim                                                                               
@@ -17,8 +17,8 @@ RUN apk add --virtual build-deps go llvm perl cmake python-dev build-base       
     mv /root/.vim/plugged/vimproc.vim/lib/vimproc_linux64.so                                                   \
       /root/.vim/plugged/vimproc.vim/lib/vimproc_unix.so                                                    && \
 #Cleanup
-    rm -rf /root/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp /usr/lib/go  																 \
-      /root/.vim/plugged/YouCompleteMe/third_party/ycmd/clang_includes                                      && \
+    rm -rf /root/.vim/plugged/youCompleteMe/third_party/ycmd/cpp /usr/lib/go  																 \
+      /root/.vim/plugged/youCompleteMe/third_party/ycmd/clang_includes                                      && \
     apk del build-deps                                                                                      && \
     apk add libxt libx11 libstdc++
 
