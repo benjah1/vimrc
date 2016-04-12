@@ -12,7 +12,8 @@ RUN cd /root/.vim/plugged/ 																												 && \
 		git clone --depth 1 https://github.com/vim-php/tagbar-phpctags.vim.git         && \
 		git clone --depth 1 https://github.com/marijnh/tern_for_vim.git
 
-RUN apk add --virtual build-deps perl cmake python-dev build-base && \
+RUN apk update && \
+		apk add --virtual build-deps perl cmake python-dev build-base && \
 		apk add nodejs php php-json php-phar php-openssl && \
 		cd ~/.vim/plugged/tern_for_vim && \
 		npm install && \
