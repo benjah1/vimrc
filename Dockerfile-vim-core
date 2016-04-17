@@ -1,9 +1,10 @@
-FROM daocloud.io/benjah1/vimrc:base
+FROM daocloud.io/benjah1/vimrc:base1.1
+#FROM vim:base
 
 MAINTAINER Benjah1 <benjaminhuang1@gmail.com>
 
 #Build YouCompleteMe
-RUN apk add --virtual build-deps go llvm perl cmake python-dev build-base                                   && \
+RUN apk add --update --virtual build-deps go llvm perl cmake python-dev build-base                                   && \
     git clone --depth 1  https://github.com/Valloric/YouCompleteMe.git /root/.vim/plugged/youCompleteMe/    && \
     cd /root/.vim/plugged/youCompleteMe                                                                     && \
     git submodule update --init --recursive                                                                 && \

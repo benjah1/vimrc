@@ -1,4 +1,5 @@
-FROM daocloud.io/benjah1/vimrc:core1.1
+FROM daocloud.io/benjah1/vimrc:core1.2
+#FROM vim:core
 
 MAINTAINER Benjah1 <benjaminhuang1@gmail.com>
 
