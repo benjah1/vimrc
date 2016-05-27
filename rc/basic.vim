@@ -38,7 +38,7 @@ endif
 " Set to auto read when a file is changed from the outside
 set autoread
 
-
+set backspace=indent,eol,start
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
