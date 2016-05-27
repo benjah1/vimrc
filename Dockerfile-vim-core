@@ -23,6 +23,11 @@ RUN apk add --update --virtual build-deps go llvm perl cmake python-dev build-ba
     apk del build-deps                                                                                      && \
     apk add libxt libx11 libstdc++
 
+RUN apk add --update perl && \
+		curl http://beyondgrep.com/ack-2.14-single-file > ack && \
+		mv ack /usr/bin && \
+		chmod 0755 /usr/bin/ack
+
 RUN cd /root/.vim/plugged/ 																												 && \
 		git clone --depth 1 https://github.com/godlygeek/tabular.git                   && \
 		git clone --depth 1 https://github.com/plasticboy/vim-markdown.git             && \
@@ -39,4 +44,3 @@ RUN cd /root/.vim/plugged/ 																												 && \
 		git clone --depth 1 https://github.com/terryma/vim-expand-region.git           && \
 		git clone --depth 1 https://github.com/tpope/vim-dispatch.git                  && \
 		git clone --depth 1 https://github.com/editorconfig/editorconfig-vim.git
-
