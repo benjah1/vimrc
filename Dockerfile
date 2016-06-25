@@ -4,7 +4,7 @@ MAINTAINER Benjah1 <benjaminhuang1@gmail.com>
 
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories
 
-RUN apt add --update git bash && \
+RUN apk add --update git bash && \
 		git clone https://github.com/benjah1/vimrc.git /root/vimrc && \
 		cd /root/vimrc && \
 		bash build.sh
