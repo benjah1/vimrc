@@ -11,7 +11,7 @@ Plug 'plasticboy/vim-markdown'
 
 " Completion
 " YouCompleteMe - need to build
-Plug 'valloric/youCompleteMe' 
+" Plug 'valloric/youCompleteMe' 
 
 " Code display
 Plug 'ap/vim-css-color' 
@@ -28,7 +28,7 @@ Plug 'majutsushi/tagbar'
 Plug 'vim-php/tagbar-phpctags.vim' 
 Plug 'mileszs/ack.vim' 
 " tern_for_vim - need to intall npm and setup tmp folder and build
-Plug 'marijnh/tern_for_vim' 
+" Plug 'marijnh/tern_for_vim' 
 
 " Interface
 Plug 'kien/ctrlp.vim'
@@ -43,5 +43,9 @@ Plug 'tpope/vim-dispatch'
 
 " Other
 Plug 'editorconfig/editorconfig-vim'
+
+Plug 'scrooloose/nerdtree.git'
+Plug 'scrooloose/syntastic.git'
+Plug 'scrooloose/nerdtree-git-plugin'
 
 call plug#end()
