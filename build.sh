@@ -28,7 +28,8 @@ apk add libsm libice libxt libx11 ncurses curl graphviz ctags perl python ncurse
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Plguin 
-cd /root/.vim/plugged/ 																												
+mkdir -p /root/.vim/plugged
+cd /root/.vim/plugged/
 # git clone --depth 1 https://github.com/Valloric/YouCompleteMe.git
 git clone --depth 1 https://github.com/Shougo/neocomplete.vim
 git clone --depth 1 https://github.com/Shougo/vimproc.vim.git
