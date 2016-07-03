@@ -6,14 +6,14 @@ apk add --virtual build-deps python python-dev build-base make mercurial libxpm-
 git clone --depth 1 https://github.com/vim/vim.git /tmp/vim
 cd /tmp/vim
 ./configure --with-features=big \
-						--enable-multibyte \
-						--enable-pythoninterp \
-						--with-python-config-dir=/usr/lib/python2.7/config \
-            --enable-luainterp \
-						--disable-gui \
-						--disable-netbeans \
-            --without-x \
-						--prefix /usr
+			--enable-multibyte \
+			--enable-pythoninterp \
+			--with-python-config-dir=/usr/lib/python2.7/config \
+			--enable-luainterp \
+			--disable-gui \
+			--disable-netbeans \
+			--without-x \
+			--prefix /usr
 make VIMRUNTIMEDIR=/usr/share/vim/vim74
 make install
 apk del build-deps
@@ -27,7 +27,7 @@ find . -name *.txt | while read line; do rm "$line"; done
 apk add libsm libice libxt libx11 ncurses curl graphviz ctags perl python ncurses-terminfo
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-# Plguin 
+# Plguin
 mkdir -p /root/.vim/plugged
 cd /root/.vim/plugged/
 # git clone --depth 1 https://github.com/Valloric/YouCompleteMe.git
@@ -93,3 +93,4 @@ mkdir /var/cache/apk
 
 # Link
 ln -s /root/vimrc/.vimrc /root/.vimrc
+ln -s /root/vimrc/.gitconfig /root/.gitconfig

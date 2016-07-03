@@ -33,12 +33,15 @@ if has('persistent_undo')
 endif
 
 " Enable filetype plugins
-" filetype plugin on
+filetype on
+filetype plugin on
 
 " Set to auto read when a file is changed from the outside
 set autoread
 
 set backspace=indent,eol,start
+
+let mapleader=";"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -61,13 +64,25 @@ set ruler
 " Height of the command bar
 set cmdheight=2
 
+" Instant search
 " Ignore case when searching
-set ignorecase
-
 " Highlight search results
+set incsearch
+set ignorecase
 set hlsearch
 
+" no cursor flashing
+set gcr=a:block-blinkon0
+" no scrollbar
+set guioptions-=l
+set guioptions-=L
+set guioptions-=r
+set guioptions-=R
+" no menu or toolbox
+set guioptions-=m
+set guioptions-=T
 
+set nowrap
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -81,8 +96,6 @@ set encoding=utf8
 
 " Use dos as the standard file type
 set ffs=unix,dos,mac
-
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo

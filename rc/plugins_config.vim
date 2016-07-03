@@ -1,3 +1,7 @@
+""""""""""""""""""""""""""""""
+" => Vim Airline
+""""""""""""""""""""""""""""""
+let g:airline_powerline_fonts = 1
 
 """"""""""""""""""""""""""""""
 " => CTRL-P
@@ -53,5 +57,12 @@ autocmd FileType html,php EmmetInstall
 """"""""""""""""""""""""""""""
 " => Tagbar
 """"""""""""""""""""""""""""""
-
 let g:tagbar_phpctags_bin = '/root/.vim/plugged/tagbar-phpctags.vim/bin/phpctags'
+
+""""""""""""""""""""""""""""""
+" => NerdTree
+""""""""""""""""""""""""""""""
+map <c-d> :NERDTreeToggle<cr>
+let NERDTreeShowHidden=1
+let NERDTreeAutoDeleteBuffer=1
+

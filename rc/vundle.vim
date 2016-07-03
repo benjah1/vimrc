@@ -44,8 +44,8 @@ Plug 'tpope/vim-dispatch'
 " Other
 Plug 'editorconfig/editorconfig-vim'
 
-Plug 'scrooloose/nerdtree.git'
-Plug 'scrooloose/syntastic.git'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdtree-git-plugin'
 
 call plug#end()

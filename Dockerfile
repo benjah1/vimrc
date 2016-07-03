@@ -13,3 +13,5 @@ ENV TERM=xterm-256color
 ENV DISABLE=""
 
 WORKDIR /src
+
+CMD vim
