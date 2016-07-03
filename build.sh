@@ -31,8 +31,8 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 mkdir -p /root/.vim/plugged
 cd /root/.vim/plugged/
 # git clone --depth 1 https://github.com/Valloric/YouCompleteMe.git
-git clone --depth 1 https://github.com/Shougo/neocomplete.vim
-git clone --depth 1 https://github.com/Shougo/vimproc.vim.git
+git clone --depth 1 https://github.com/shougo/neocomplete.vim.git
+git clone --depth 1 https://github.com/shougo/vimproc.vim.git
 git clone --depth 1 https://github.com/godlygeek/tabular.git
 git clone --depth 1 https://github.com/plasticboy/vim-markdown.git
 git clone --depth 1 https://github.com/nathanaelkane/vim-indent-guides.git
@@ -57,7 +57,7 @@ git clone --depth 1 https://github.com/vim-php/tagbar-phpctags.vim.git
 # git clone --depth 1 https://github.com/marijnh/tern_for_vim.git
 git clone --depth 1 https://github.com/scrooloose/nerdtree.git
 git clone --depth 1 https://github.com/scrooloose/syntastic.git
-git clone --depth 1 https://github.com/scrooloose/nerdtree-git-plugin
+git clone --depth 1 https://github.com/scrooloose/nerdtree-git-plugin.git
 
 ## Install Ycm
 # apk add --virtual build-deps go llvm perl cmake python-dev build-base

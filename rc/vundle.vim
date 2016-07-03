@@ -38,12 +38,13 @@ Plug 'tomasr/molokai'
 
 " Command
 Plug 'terryma/vim-expand-region' 
-Plug 'Shougo/vimproc.vim'
+Plug 'shougo/vimproc.vim'
 Plug 'tpope/vim-dispatch'
 
 " Other
 Plug 'editorconfig/editorconfig-vim'
 
+Plug 'shougo/neocomplete.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdtree-git-plugin'
