@@ -1,30 +1,37 @@
 #!/bin/bash
 
-# Vim 7.4
+# Vim 8
 apk update
-apk add --virtual build-deps python python-dev build-base make mercurial libxpm-dev libx11-dev libxt-dev ncurses-dev
-git clone --depth 1 https://github.com/vim/vim.git /tmp/vim
+apk add --virtual build-deps lua-dev python-dev build-base make cmake libxpm-dev libx11-dev libxt-dev ncurses-dev
+apk add lua libsm libice libxt libx11 ncurses curl graphviz ctags perl python ncurses-terminfo
+
+# config lua
+# mkdir -p /usr/include/lua5.1/
+# mv /usr/include/l*.h* /usr/include/lua5.1/
+
+# install vim
+git clone --branch v8.0.0069 --depth 1 https://github.com/vim/vim.git /tmp/vim
 cd /tmp/vim
 ./configure --with-features=big \
 			--enable-multibyte \
+			--enable-largefile \
 			--enable-pythoninterp \
 			--with-python-config-dir=/usr/lib/python2.7/config \
 			--enable-luainterp \
+			--with-lua-prefix=/usr \
 			--disable-gui \
 			--disable-netbeans \
 			--without-x \
 			--prefix /usr
-make VIMRUNTIMEDIR=/usr/share/vim/vim74
+make VIMRUNTIMEDIR=/usr/share/vim/vim80
 make install
-apk del build-deps
 
 ## Deleting docs, tutorials, icons and lang
-cd /usr/share/vim/vim74/
+cd /usr/share/vim/vim80/
 rm -rf lang/* tutor/* gvimrc_example.vim vimrc_example.vim
-find . -name *.txt | while read line; do rm "$line"; done
+# find . -name *.txt | while read line; do rm "$line"; done
 
 ## Dependency
-apk add libsm libice libxt libx11 ncurses curl graphviz ctags perl python ncurses-terminfo
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Plguin
@@ -69,11 +76,8 @@ git clone --depth 1 https://github.com/scrooloose/nerdtree-git-plugin.git
 # apk add libxt libx11 libstdc++
 
 ## Install ProcVim
-apk add --virtual build-deps build-base
 cd /root/.vim/plugged/vimproc.vim
 make
-# mv /root/.vim/plugged/vimproc.vim/lib/vimproc_linux64.so /root/.vim/plugged/vimproc.vim/lib/vimproc_unix.so
-apk del build-deps
 
 ## Install Ack
 curl http://beyondgrep.com/ack-2.14-single-file > ack
@@ -81,15 +85,15 @@ mv ack /usr/bin
 chmod 0755 /usr/bin/ack
 
 ## Install tagbar-phpctags
-apk add --virtual build-deps cmake python-dev build-base
 apk add php5 php5-json php5-phar php5-openssl
 cd ~/.vim/plugged/tagbar-phpctags.vim
 make
-apk del build-deps
 
 # Clean up
 rm -rf /usr/share/man/* /usr/share/icons/* /usr/share/doc/* /tmp/* /var/cache/* /var/log/* /var/tmp/*
 mkdir /var/cache/apk
+
+apk del build-deps
 
 # Link
 ln -s /root/vimrc/.vimrc /root/.vimrc

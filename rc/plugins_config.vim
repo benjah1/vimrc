@@ -66,3 +66,9 @@ map <c-d> :NERDTreeToggle<cr>
 let NERDTreeShowHidden=1
 let NERDTreeAutoDeleteBuffer=1
 
+""""""""""""""""""""""""""""""
+" => NeoComplete
+""""""""""""""""""""""""""""""
+let g:neocomplete#enable_at_startup=1
+let g:neocomplete#enable_smart_case=1
+
