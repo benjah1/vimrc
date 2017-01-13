@@ -11,7 +11,8 @@ Plug 'plasticboy/vim-markdown'
 
 " Completion
 " YouCompleteMe - need to build
-" Plug 'valloric/youCompleteMe' 
+Plug 'valloric/youCompleteMe' 
+" Plug 'shougo/neocomplete.vim'
 
 " Code display
 Plug 'ap/vim-css-color' 
@@ -28,12 +29,13 @@ Plug 'majutsushi/tagbar'
 Plug 'vim-php/tagbar-phpctags.vim' 
 Plug 'mileszs/ack.vim' 
 " tern_for_vim - need to intall npm and setup tmp folder and build
-" Plug 'marijnh/tern_for_vim' 
+Plug 'ternjs/tern_for_vim' 
 
 " Interface
 Plug 'kien/ctrlp.vim'
 Plug 'terryma/vim-multiple-cursors' 
-Plug 'bling/vim-airline'
+" Plug 'bling/vim-airline'
+Plug 'itchyny/lightline.vim' " lighter
 Plug 'tomasr/molokai' 
 
 " Command
@@ -44,7 +46,6 @@ Plug 'tpope/vim-dispatch'
 " Other
 Plug 'editorconfig/editorconfig-vim'
 
-Plug 'shougo/neocomplete.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdtree-git-plugin'

@@ -1,11 +1,10 @@
-FROM alpine:3.4
+FROM alpine:edge
 
 MAINTAINER Benjah1 <benjaminhuang1@gmail.com>
 
-# RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories
+ADD ./ /root/vimrc
 
 RUN apk add --update git && \
-		git clone https://github.com/benjah1/vimrc.git /root/vimrc && \
 		cd /root/vimrc && \
 		sh build.sh
 

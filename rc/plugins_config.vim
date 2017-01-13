@@ -1,7 +1,7 @@
 """"""""""""""""""""""""""""""
 " => Vim Airline
 """"""""""""""""""""""""""""""
-let g:airline_powerline_fonts = 1
+" let g:airline_powerline_fonts = 1
 
 """"""""""""""""""""""""""""""
 " => CTRL-P
@@ -65,10 +65,4 @@ let g:tagbar_phpctags_bin = '/root/.vim/plugged/tagbar-phpctags.vim/bin/phpctags
 map <c-d> :NERDTreeToggle<cr>
 let NERDTreeShowHidden=1
 let NERDTreeAutoDeleteBuffer=1
-
-""""""""""""""""""""""""""""""
-" => NeoComplete
-""""""""""""""""""""""""""""""
-let g:neocomplete#enable_at_startup=1
-let g:neocomplete#enable_smart_case=1
 
