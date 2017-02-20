@@ -26,7 +26,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'szw/vim-tags' 
 Plug 'majutsushi/tagbar' 
 " Tagbar-PhpCtags - need to install php and build
-Plug 'vim-php/tagbar-phpctags.vim' 
+" Plug 'vim-php/tagbar-phpctags.vim' 
 Plug 'mileszs/ack.vim' 
 " tern_for_vim - need to intall npm and setup tmp folder and build
 Plug 'ternjs/tern_for_vim' 
@@ -49,5 +49,6 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdtree-git-plugin'
+Plug 'mhinz/vim-startify'
 
 call plug#end()

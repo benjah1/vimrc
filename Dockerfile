@@ -4,8 +4,7 @@ MAINTAINER Benjah1 <benjaminhuang1@gmail.com>
 
 ADD ./ /root/vimrc
 
-RUN apk add --update git && \
-		cd /root/vimrc && \
+RUN cd /root/vimrc && \
 		sh build.sh
 
 ENV TERM=xterm-256color
