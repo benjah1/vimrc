@@ -1,0 +1,8 @@
+# vim: set filetype=gitconfig:
+
+[color]
+	ui = auto
+
+[core]
+	editor = vim
+	autocrlf = false

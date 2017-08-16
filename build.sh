@@ -1,15 +1,22 @@
 #!/bin/bash -ex
 
 set -e
-set -o pipefail
 
 # Vim 8
-apk update
-apk add --virtual build-deps lua-dev python-dev build-base make cmake libxpm-dev libx11-dev libxt-dev ncurses-dev go llvm 
-apk add git lua libsm libice libxt libx11 ncurses curl ctags perl python ncurses-terminfo editorconfig libgcc libstdc++ libuv nodejs
+
+apt-get update
+# apt-get install -y build-essential liblua5.3-dev python-dev libxpm-dev libx11-dev libxt-dev libncurses5-dev golang llvm
+# apt-get install -y git lua5.3 libsm libice libxt libx11 ncurses curl ctags perl python ncurses-terminfo editorconfig libgcc libstdc++ libuv nodejs
+apt-get install -y build-essential cmake libncurses5-dev \
+    libx11-dev libxpm-dev libxt-dev python-dev \
+    lua5.3 lua5.3-dev libperl-dev git \
+	curl ctags editorconfig
+
+curl -sL https://deb.nodesource.com/setup_6.x | bash -
+apt-get install -y nodejs
 
 # install vim
-git clone --branch v8.0.0342 --depth 1 https://github.com/vim/vim.git /tmp/vim
+git clone --branch v8.0.0946 --depth 1 https://github.com/vim/vim.git /tmp/vim
 cd /tmp/vim
 ./configure --with-features=big \
 			--enable-multibyte \
@@ -84,9 +91,7 @@ chmod 0755 /usr/bin/ack
 cd ~/.vim/plugged/tern_for_vim
 npm install
 
-
 # Clean up
-apk del build-deps
 
 ## Deleting docs, tutorials, icons and lang
 cd /usr/share/vim/vim80/
@@ -94,8 +99,16 @@ rm -rf lang/* tutor/* gvimrc_example.vim vimrc_example.vim
 # find . -name *.txt | while read line; do rm "$line"; done
 
 rm -rf /usr/share/man/* /usr/share/icons/* /usr/share/doc/* /tmp/* /var/cache/* /var/log/* /var/tmp/*
-mkdir /var/cache/apk
 
 # Link
-ln -s /root/vimrc/.vimrc /root/.vimrc
-ln -s /root/vimrc/.gitconfig /root/.gitconfig
+ln -s /root/vimrc/vimrc /etc/vimrc
+ln -s /root/vimrc/gitconfig /etc/gitconfig
+
+mkdir -p /root/.vim/files/info
+touch /root/.viminfo
+touch /root/.vt_locations
+
+chmod 777 -R /root/.vim
+chmod 777 -R /root/vimrc
+chmod 777 /root/.viminfo
+chmod 777 /root/.vt_locations

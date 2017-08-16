@@ -107,7 +107,7 @@ set nobackup
 set nowb
 set noswapfile
 
-
+set viminfo='100,n/root/.vim/files/info/viminfo
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
