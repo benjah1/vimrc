@@ -2,7 +2,7 @@ FROM debian:stretch-slim
 
 MAINTAINER Benjah1 <benjaminhuang1@gmail.com>
 
-ARG GIT_NAME="Benjah1"
+ARG GIT_NAME="benjah1"
 ARG GIT_EMAIL="benjaminhuang1@gmail.com"
 
 ENV GIT_AUTHOR_NAME=$GIT_NAME
