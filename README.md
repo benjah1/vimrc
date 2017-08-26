@@ -1,7 +1,7 @@
 # The vimrc
 
 
-## How to install it on local?
+## How to install it on local? (Mist)
 
 ```
 	git clone git://github.com/benjah1/vimrc.git ~/vim_runtime
@@ -11,21 +11,36 @@
 After this, open vim and execute :PluginInstall.
 And then, you need to complete the dependency for youCompleteMe, Tern_for_vim, Tagbar-phpctags. It may be different on different OS.
 
+ps: not sure as I haven't used it in this way for a long time.
+
 ## How to install it with docker?
 The awesome part of this is you can use docker image of it and without worry about the dependency. To install it simply do following:
 
 ```
-	git clone git://github.com/benjah1/vimrc.git ~/vim_runtime
-	cd ~/vim_runtime
+	git clone git://github.com/benjah1/vimrc.git ~/vimrc
+	cd ~/vimrc
 	docker build .
+```
+
+## Use it from docker hub
+
+Even better, use it from Docker hub directly.
+
+```
+  docker run -d --name [xxx] -v $(pwd):/src \
+		-e GIT_AUTHOR_NAME=[xxx] \
+		-e GIT_AUTHOR_EMAIL=[xxx] \
+		benjah1/vimrc:1.7.[x]
+
+	docker exec -it [xxx]
 ```
 
 ## What plugins are included?
 
 ### Language
-* [mattn/emmet-vim](https://github.com/mattn/emmet-vim)
+* ~~[mattn/emmet-vim](https://github.com/mattn/emmet-vim)~~
 * [othree/html5.vim](https:/github.com/othree/html5.vim)
-* [briancollins/vim-jst](https:/github.com/briancollins/vim-jst)
+* ~~[briancollins/vim-jst](https:/github.com/briancollins/vim-jst)~~
 * [cakebaker/scss-syntax.vim](https:/github.com/cakebaker/scss-syntax.vim)
 * [godlygeek/tabular](https:/github.com/godlygeek/tabular)
 * [plasticboy/vim-markdown](https:/github.com/plasticboy/vim-markdown)
