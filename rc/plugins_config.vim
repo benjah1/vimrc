@@ -7,6 +7,7 @@
 " => CTRL-P
 """"""""""""""""""""""""""""""
 let g:ctrlp_working_path_mode = 0
+let g:ctrlp_show_hidden=1
 
 let g:ctrlp_map = '<c-f>'
 map <c-b> :CtrlPBuffer<cr>
@@ -65,6 +66,7 @@ let g:tagbar_phpctags_bin = '/root/.vim/plugged/tagbar-phpctags.vim/bin/phpctags
 map <c-d> :NERDTreeToggle<cr>
 let NERDTreeShowHidden=1
 let NERDTreeAutoDeleteBuffer=1
+let NERDTreeIgnore=['\.git$[[dir]]', '\node_modules$[[dir]]']
 
 """"""""""""""""""""""""""""""
 " => Startify

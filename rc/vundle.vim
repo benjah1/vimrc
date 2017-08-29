@@ -32,7 +32,7 @@ Plug 'mileszs/ack.vim'
 Plug 'ternjs/tern_for_vim' 
 
 " Interface
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'terryma/vim-multiple-cursors' 
 " Plug 'bling/vim-airline'
 Plug 'itchyny/lightline.vim' " lighter

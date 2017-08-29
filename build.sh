@@ -52,7 +52,7 @@ git clone --depth 1 https://github.com/airblade/vim-gitgutter.git
 git clone --depth 1 https://github.com/szw/vim-tags.git
 git clone --depth 1 https://github.com/majutsushi/tagbar.git
 git clone --depth 1 https://github.com/mileszs/ack.vim.git
-git clone --depth 1 https://github.com/kien/ctrlp.vim.git
+git clone --depth 1 https://github.com/ctrlpvim/ctrlp.vim.git
 git clone --depth 1 https://github.com/terryma/vim-multiple-cursors.git
 git clone --depth 1 https://github.com/itchyny/lightline.vim.git
 git clone --depth 1 https://github.com/tomasr/molokai.git
