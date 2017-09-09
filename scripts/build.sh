@@ -2,8 +2,10 @@
 
 set -e
 
-# Vim 8
+VIM_VERSION=v8.0.0946
+VIM_ROOT=/var/lib/vim
 
+# Vim 8
 apt-get update
 apt-get install -y curl gnupg
 curl -sL https://deb.nodesource.com/setup_6.x | bash -
@@ -19,7 +21,7 @@ apt-get install -y build-essential cmake libncurses5-dev \
 apt-get install -y nodejs
 
 # install vim
-git clone --branch v8.0.0946 --depth 1 https://github.com/vim/vim.git /tmp/vim
+git clone --branch ${VIM_VERSION} --depth 1 https://github.com/vim/vim.git /tmp/vim
 cd /tmp/vim
 ./configure --with-features=big \
 			--enable-multibyte \
@@ -36,11 +38,11 @@ make VIMRUNTIMEDIR=/usr/share/vim/vim80
 make install
 
 ## Dependency
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ${VIM_ROOT}/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Plguin
-mkdir -p /root/.vim/plugged
-cd /root/.vim/plugged/
+mkdir -p ${VIM_ROOT}/plugged
+cd ${VIM_ROOT}/plugged/
 git clone --depth 1 https://github.com/valloric/youCompleteMe.git
 # git clone --depth 1 https://github.com/shougo/neocomplete.vim.git
 git clone --depth 1 https://github.com/shougo/vimproc.vim.git
@@ -72,12 +74,12 @@ git clone --depth 1 https://github.com/scrooloose/nerdtree-git-plugin.git
 git clone --depth 1 https://github.com/mhinz/vim-startify.git
 
 ## Install Ycm
-cd /root/.vim/plugged/youCompleteMe
+cd ${VIM_ROOT}/plugged/youCompleteMe
 git submodule update --init --recursive
 ./install.py --tern-completer
 
 ## Install ProcVim
-cd /root/.vim/plugged/vimproc.vim
+cd ${VIM_ROOT}/plugged/vimproc.vim
 make
 
 ## Install Ack
@@ -91,7 +93,7 @@ chmod 0755 /usr/bin/ack
 # make
 
 ## Install tern for vim
-cd ~/.vim/plugged/tern_for_vim
+cd ${VIM_ROOT}/plugged/tern_for_vim
 npm install
 
 # Clean up
@@ -104,17 +106,15 @@ cd /usr/share/vim/vim80/
 rm -rf lang/* tutor/* gvimrc_example.vim vimrc_example.vim
 # find . -name *.txt | while read line; do rm "$line"; done
 rm -rf /usr/share/man/* /usr/share/icons/* /usr/share/doc/* /tmp/* /var/cache/* /var/log/* /var/tmp/*
-rm -rf /root/.vim/plugged/youCompleteMe/.git/modules/third_party
+rm -rf ${VIM_ROOT}/plugged/youCompleteMe/.git/modules/third_party
 
 # Link
-ln -s /root/vimrc/vimrc /etc/vimrc
-ln -s /root/vimrc/gitconfig /etc/gitconfig
+ln -s /vimrc/vim/vimrc ${VIM_ROOT}/vimrc
+ln -s /vimrc/vim/rc ${VIM_ROOT}/rc
+ln -s /vimrc/dotfiles/gitconfig /etc/gitconfig
 
-mkdir -p /root/.vim/files/info
-touch /root/.viminfo
-touch /root/.vt_locations
+mkdir -p ${VIM_ROOT}/files/info
+touch ${VIM_ROOT}/viminfo
+touch ${VIM_ROOT}/vt_locations
 
-chmod 777 -R /root/.vim
-chmod 777 -R /root/vimrc
-chmod 777 /root/.viminfo
-chmod 777 /root/.vt_locations
+chmod 777 -R ${VIM_ROOT}

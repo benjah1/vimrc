@@ -20,6 +20,7 @@ let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee|^\.ven
 " => Vim-tags
 """"""""""""""""""""""""""""""
 let g:vim_tags_use_vim_dispatch = 1
+let g:vim_tags_cache_dir = '/var/lib/vim'
 
 
 """"""""""""""""""""""""""""""
@@ -58,7 +59,7 @@ autocmd FileType html,php EmmetInstall
 """"""""""""""""""""""""""""""
 " => Tagbar
 """"""""""""""""""""""""""""""
-let g:tagbar_phpctags_bin = '/root/.vim/plugged/tagbar-phpctags.vim/bin/phpctags'
+let g:tagbar_phpctags_bin = '/var/lib/vim/plugged/tagbar-phpctags.vim/bin/phpctags'
 
 """"""""""""""""""""""""""""""
 " => NerdTree
@@ -71,7 +72,7 @@ let NERDTreeIgnore=['\.git$[[dir]]', '\node_modules$[[dir]]']
 """"""""""""""""""""""""""""""
 " => Startify
 """"""""""""""""""""""""""""""
-let g:startify_session_dir = '/root/.vim/session'
+let g:startify_session_dir = '/var/lib/vim/session'
 let g:startify_list_order = [
     \['    MRU'], 'files', 
     \['    Sessions'], 'sessions',]

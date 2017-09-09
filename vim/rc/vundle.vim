@@ -1,4 +1,4 @@
-call plug#begin('~/.vim/plugged')
+call plug#begin('/var/lib/vim/plugged')
 
 " Language
 Plug 'mattn/emmet-vim'

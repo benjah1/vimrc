@@ -1,0 +1,6 @@
+source /var/lib/vim/rc/basic.vim
+source /var/lib/vim/rc/vundle.vim
+source /var/lib/vim/rc/filetypes.vim
+source /var/lib/vim/rc/plugins_config.vim
+source /var/lib/vim/rc/extended.vim
+

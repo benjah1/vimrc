@@ -23,6 +23,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set runtimepath+=/var/lib/vim
 set nocompatible
 
 " Sets how many lines of history VIM has to remember
@@ -30,7 +31,7 @@ set history=200        " command line history
 if has('persistent_undo')
     set undofile       " keep an undo record separately for every file
     set undolevels=200
-    set undodir=$HOME/.vim/undo
+    set undodir=/var/lib/vim/undo
 endif
 
 " Enable filetype plugins
@@ -107,7 +108,7 @@ set nobackup
 set nowb
 set noswapfile
 
-set viminfo='100,n/root/.vim/files/info/viminfo
+set viminfo='100,n/var/lib/vim/viminfo
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related

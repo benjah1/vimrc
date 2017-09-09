@@ -10,16 +10,13 @@ ENV GIT_AUTHOR_EMAIL=$GIT_EMAIL
 ENV GIT_COMMITTER_NAME=$GIT_NAME
 ENV GIT_COMMITTER_EMAIL=$GIT_EMAIL
 
-ENV VIM=/etc
-
-ADD ./ /root/vimrc
-
-RUN cd /root/vimrc && \
-		sh build.sh
-
 ENV TERM=xterm-256color
 ENV DISABLE=""
 
-WORKDIR /src
+ENV VIM=/var/lib/vim
 
+ADD ./ /vimrc
+RUN cd /vimrc/scripts && sh build.sh
+
+WORKDIR /src
 CMD ["tail", "-f", "/dev/null"]
