@@ -30,6 +30,10 @@ Even better, use it from Docker hub directly.
   docker run -d --name [xxx] -v $(pwd):/src \
 		-e GIT_AUTHOR_NAME=[xxx] \
 		-e GIT_AUTHOR_EMAIL=[xxx] \
+		-e GIT_COMMITTER_NAME=[xxx]
+		-e GIT_COMMITTER_EMAIL=[xxx]
+
+
 		benjah1/vimrc:1.7.[x]
 
 	docker exec -it [xxx]
