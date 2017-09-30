@@ -1,9 +1,9 @@
 call plug#begin('/var/lib/vim/plugged')
 
 " Language
-Plug 'mattn/emmet-vim'
+" Plug 'mattn/emmet-vim'
 Plug 'othree/html5.vim'
-Plug 'briancollins/vim-jst'
+" Plug 'briancollins/vim-jst'
 Plug 'cakebaker/scss-syntax.vim'
 " Required by vim-markdown
 Plug 'godlygeek/tabular'
@@ -47,7 +47,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'editorconfig/editorconfig-vim'
 
 Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/syntastic'
+Plug 'vim-syntastic/syntastic'
 Plug 'scrooloose/nerdtree-git-plugin'
 Plug 'mhinz/vim-startify'
 
