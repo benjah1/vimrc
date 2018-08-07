@@ -15,6 +15,17 @@ map <c-b> :CtrlPBuffer<cr>
 let g:ctrlp_max_height = 20
 let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee|^\.vender\'
 
+""""""""""""""""""""""""""""""
+" => vim-multiple-cursors
+""""""""""""""""""""""""""""""
+function Multiple_cursors_before()
+  let s:old_ycm_whitelist = g:ycm_filetype_whitelist
+  let g:ycm_filetype_whitelist = {}
+endfunction
+
+function Multiple_cursors_after()
+  let g:ycm_filetype_whitelist = s:old_ycm_whitelist
+endfunction
 
 """"""""""""""""""""""""""""""
 " => Vim-tags

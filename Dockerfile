@@ -16,7 +16,7 @@ ENV DISABLE=""
 ENV VIM=/var/lib/vim
 
 ADD ./ /vimrc
-RUN cd /vimrc/scripts && sh build.sh
+RUN cd /vimrc/scripts && bash build.sh
 
 WORKDIR /src
 CMD ["tail", "-f", "/dev/null"]

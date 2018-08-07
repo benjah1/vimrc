@@ -3,16 +3,16 @@ call plug#begin('/var/lib/vim/plugged')
 " Language
 " Plug 'mattn/emmet-vim'
 Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript'
 " Plug 'briancollins/vim-jst'
+Plug 'elzr/vim-json'
 Plug 'cakebaker/scss-syntax.vim'
-" Required by vim-markdown
-Plug 'godlygeek/tabular'
+Plug 'godlygeek/tabular' " Required by vim-markdown
 Plug 'plasticboy/vim-markdown'
+Plug 'ekalinin/dockerfile.vim'
 
 " Completion
-" YouCompleteMe - need to build
-Plug 'valloric/youCompleteMe' 
-" Plug 'shougo/neocomplete.vim'
+Plug 'valloric/youCompleteMe' " need to build
 
 " Code display
 Plug 'ap/vim-css-color' 
@@ -25,16 +25,13 @@ Plug 'airblade/vim-gitgutter'
 " - tag
 Plug 'szw/vim-tags' 
 Plug 'majutsushi/tagbar' 
-" Tagbar-PhpCtags - need to install php and build
-" Plug 'vim-php/tagbar-phpctags.vim' 
+" Plug 'vim-php/tagbar-phpctags.vim' " need to install php and build
 Plug 'mileszs/ack.vim' 
-" tern_for_vim - need to intall npm and setup tmp folder and build
-Plug 'ternjs/tern_for_vim' 
+Plug 'ternjs/tern_for_vim' " tern_for_vim - need to intall npm and setup tmp folder and build
 
 " Interface
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'terryma/vim-multiple-cursors' 
-" Plug 'bling/vim-airline'
 Plug 'itchyny/lightline.vim' " lighter
 Plug 'tomasr/molokai' 
 
