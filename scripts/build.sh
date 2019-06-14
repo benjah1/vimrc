@@ -3,7 +3,7 @@
 set -e
 
 VIM=/var/lib/vim
-VIM_VERSION=v8.1.0240
+VIM_VERSION=v8.1.1525
 
 # Vim 8
 apt-get update
