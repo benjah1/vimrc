@@ -6,14 +6,14 @@
 """"""""""""""""""""""""""""""
 " => CTRL-P
 """"""""""""""""""""""""""""""
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_show_hidden=1
+"let g:ctrlp_working_path_mode = 0
+"let g:ctrlp_show_hidden=1
 
-let g:ctrlp_map = '<c-f>'
-map <c-b> :CtrlPBuffer<cr>
+"let g:ctrlp_map = '<c-f>'
+"map <c-b> :CtrlPBuffer<cr>
 
-let g:ctrlp_max_height = 20
-let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee|^\.vender\'
+"let g:ctrlp_max_height = 20
+"let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee|^\.vender\'
 
 """"""""""""""""""""""""""""""
 " => vim-multiple-cursors
@@ -61,16 +61,16 @@ let g:vim_markdown_folding_disabled = 1
 """"""""""""""""""""""""""""""
 " => Emmet-vim
 """"""""""""""""""""""""""""""
-let g:user_emmet_mode='n'
+"let g:user_emmet_mode='n'
 
-let g:user_emmet_install_global = 0
-autocmd FileType html,php EmmetInstall
+"let g:user_emmet_install_global = 0
+"autocmd FileType html,php EmmetInstall
 
 
 """"""""""""""""""""""""""""""
 " => Tagbar
 """"""""""""""""""""""""""""""
-let g:tagbar_phpctags_bin = '/var/lib/vim/plugged/tagbar-phpctags.vim/bin/phpctags'
+"let g:tagbar_phpctags_bin = '/var/lib/vim/plugged/tagbar-phpctags.vim/bin/phpctags'
 
 """"""""""""""""""""""""""""""
 " => NerdTree

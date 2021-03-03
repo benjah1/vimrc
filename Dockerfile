@@ -1,4 +1,4 @@
-FROM debian:stretch-slim
+FROM debian:bullseye-slim
 
 MAINTAINER Benjah1 <benjaminhuang1@gmail.com>
 
